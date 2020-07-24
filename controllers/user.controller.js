@@ -13,7 +13,7 @@ exports.challange = (req,res) =>{
   });
 
   // Save Tutorial in the database
-  User.save(user)
+  user.save(user)
     .then(data => {
 	console.log(data);
     })
