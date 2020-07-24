@@ -3,10 +3,10 @@ const Tutorial = db.tutorials;
 
 exports.challange = (req,res) =>{
 	const token =
-{
-    "token": "Jhj5dZrVaK7ZwHHjRyZWjbDl",
-    "challenge": "3eZbrw1aBm2rZgRNFdxV2595E9CY3gmdALWMmHkvFXO7tYXAYM8P",
-    "type": "url_verification"
+{	"type": "url_verification",
+    "token": "slzp5PnNV7NaAndIKXQfzw5I",
+    "challenge": "kYjBHwOazNrZj5Pa39oanT7WclH8diOe4Jo5XL4xw2nYkEyyl6M3",
+    
 };
 	res.send(token);
 
