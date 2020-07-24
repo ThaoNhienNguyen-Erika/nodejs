@@ -3,8 +3,31 @@ const Tutorial = db.tutorials;
 
 exports.challange = (req,res) =>{
 
-	 console.log(req.body);
 	res.send(req.body);
+// Create a Tutorial
+  //const tutorial = new Tutorial({
+    //title: req.body.title,
+    //description: req.body.description,
+   // published: req.body.published ? req.body.published : false
+  //});
+ const tutorial = new Tutorial({
+    title: "1",
+    description: "2",
+    published: false
+  });
+
+  // Save Tutorial in the database
+  tutorial
+    .save(tutorial)
+    .then(data => {
+      res.send(data);
+    })
+    .catch(err => {
+      res.status(500).send({
+        message:
+          err.message || "Some error occurred while creating the Tutorial."
+      });
+    });
 
 };
 exports.findAll = (req, res) => {
