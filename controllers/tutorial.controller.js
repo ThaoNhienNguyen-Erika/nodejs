@@ -2,13 +2,8 @@ const db = require("../models");
 const Tutorial = db.tutorials;
 
 exports.challange = (req,res) =>{
-	const token =
-{	"type": "url_verification",
-    "token": "slzp5PnNV7NaAndIKXQfzw5I",
-    "challenge": "kYjBHwOazNrZj5Pa39oanT7WclH8diOe4Jo5XL4xw2nYkEyyl6M3",
-    
-};
-	res.send(token);
+
+	res.send(req.query.body);
 
 }
 
