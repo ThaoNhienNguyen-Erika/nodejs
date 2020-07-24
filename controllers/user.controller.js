@@ -5,13 +5,13 @@ exports.challange = (req,res) =>{
 
 	res.send(req.body);
 	console.log(req.body.event.type);
-	
+	try{
 	const user = new User({
     userid: "1",
-    point:  100
+    point: 100
   });
+}catch(err =>{console.log(err.message)});
 
- 
 
 };
 exports.findAll = (req, res) => {
