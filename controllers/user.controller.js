@@ -6,7 +6,23 @@ exports.challange = (req,res) =>{
 	res.send(req.body);
 	console.log(req.body.event.type);
 	
+	const user = new User({
+    userid: "1",
+    point:  100
+  });
 
+  // Save Tutorial in the database
+  User
+    .save(user)
+    .then(data => {
+      res.send(data);
+    })
+    .catch(err => {
+      res.status(500).send({
+        message:
+          err.message || "Some error occurred while creating the Tutorial."
+      });
+    });
 
 };
 exports.findAll = (req, res) => {
