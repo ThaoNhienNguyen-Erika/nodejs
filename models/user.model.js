@@ -4,7 +4,7 @@ module.exports = mongoose => {
     mongoose.Schema(
       {
         userid: String,
-	point: Integer
+	point: number
       },
       { timestamps: true }
     )
