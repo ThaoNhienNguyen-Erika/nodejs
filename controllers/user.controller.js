@@ -23,7 +23,6 @@ exports.challange = (req,res) =>{
           err.message || "Some error occurred while creating the Tutorial."
       });
     });
-	}
 	
 
 };
