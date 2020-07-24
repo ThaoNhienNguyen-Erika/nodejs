@@ -4,7 +4,10 @@ const Tutorial = db.tutorials;
 exports.challange = (req,res) =>{
 
 	res.send(req.body);
-	console.log(req.body);
+	var json = JSON.parse(req.body);
+	var event_type = json.event.type;
+	console.log(event_type);
+	
 
 };
 exports.findAll = (req, res) => {
