@@ -5,7 +5,7 @@ exports.challange = (req,res) =>{
 
 	res.send(req.body);
 	console.log(req.body.event.type);
-	if(req.body.event.type=='message'){
+	
 
  	const user = new User({
     userid: "nhat",
