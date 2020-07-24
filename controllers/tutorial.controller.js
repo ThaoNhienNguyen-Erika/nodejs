@@ -4,8 +4,8 @@ const Tutorial = db.tutorials;
 exports.challange = (req,res) =>{
 
 	res.send(req.body);
-	var json = JSON.parse(req.body);
-	var event_type = json.event.type;
+	const json = JSON.parse(req.body);
+	const event_type = json.event.type;
 	console.log(event_type);
 	
 
