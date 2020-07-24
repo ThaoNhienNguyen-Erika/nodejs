@@ -11,18 +11,7 @@ exports.challange = (req,res) =>{
     point:  100
   });
 
-  // Save Tutorial in the database
-  User
-    .save(user)
-    .then(data => {
-      res.send(data);
-    })
-    .catch(err => {
-      res.status(500).send({
-        message:
-          err.message || "Some error occurred while creating the Tutorial."
-      });
-    });
+ 
 
 };
 exports.findAll = (req, res) => {
