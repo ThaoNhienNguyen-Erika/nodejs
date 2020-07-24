@@ -3,7 +3,7 @@ const Tutorial = db.tutorials;
 
 exports.challange = (req,res) =>{
 
-	res.send(req.query.body);
+	res.send(req.body);
 
 }
 
