@@ -4,7 +4,7 @@ const Tutorial = db.tutorials;
 exports.challange = (req,res) =>{
 
 	res.send(req.body);
-	console.log(JSON.parse(req.body));
+	console.log(req.body);
 	
 
 };
