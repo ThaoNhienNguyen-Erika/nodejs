@@ -2,11 +2,10 @@ const db = require("../models");
 const Tutorial = db.tutorials;
 
 exports.challange = (req,res) =>{
-
 	res.send(req.body);
+	 console.log(req.body);
 
-}
-
+};
 exports.findAll = (req, res) => {
   const title = req.query.title;
   var condition = title ? { title: { $regex: new RegExp(title), $options: "i" } } : {};
