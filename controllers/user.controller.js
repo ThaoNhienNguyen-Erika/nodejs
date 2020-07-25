@@ -1,27 +1,36 @@
 const db = require("../models");
+const request = require('request');
 const User = db.users;
 
 exports.challange = (req,res) =>{
 
 	res.send(req.body);
-	console.log(req.body);
-	
-	const user = new User({
-    userid: "1",
-    point: 100
-  });
-
-  user
-    .save(user)
-    .then(data => {
-	console.log("Success");
-    })
-    .catch(err => {
-      res.status(500).send({
-        message:
-          err.message || "Some error occurred while creating the Tutorial."
-      });
+	const userid = req.body.event.user;
+  	request("https://slack.com/api/users.info?token=xoxb-1258859871714-1247843080615-lkRlIh9dkXbXyL6jOaO8IUsw&user="+userid+"&pretty=1", function (error, response, body) {
+	console.log(JSON.parse(body).user.name);
+	if(req.body.event.type=="reaction_added"){
+	console.log(req.body.event.reaction);
+	}else{
+	console.log(req.body.event.text);
+	}
     });
+	
+	//const user = new User({
+   // userid: "1",
+   // point: 100
+ // });
+
+ // user
+  //  .save(user)
+   // .then(data => {
+//	console.log("Success");
+  //  })
+  //  .catch(err => {
+   //   res.status(500).send({
+    //    message:
+   //       err.message || "Some error occurred while creating the Tutorial."
+   //   });
+   // });
 
 };
 exports.findAll = (req, res) => {
@@ -39,6 +48,19 @@ exports.findAll = (req, res) => {
     });
   	
 };
+
+exports.xemDiem = (req, res) => {
+  res.send("trannhat2411999 : 150 points");
+};
+exports.xemXepHang = (req, res) => {
+const xephang = [
+	{"name":"trannhat2411999","points":150},
+	{"name":"thaonhiennguyen","points":145},
+	{"name":"lehai","points":144}
+];
+  res.send(xephang);
+};
+
 
 exports.create = (req, res) => {
   // Validate request

@@ -4,6 +4,8 @@ module.exports = app => {
   var router = require("express").Router();
 
   router.post("/challange", user.challange);
+  router.post("/xemdiemhientai", user.xemDiem);
+  router.post("/xembangxephang", user.xemXepHang);
   // Retrieve all Tutorials
   router.get("/", user.findAll);
 
