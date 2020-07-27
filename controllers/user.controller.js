@@ -2,10 +2,11 @@ const db = require("../models");
 const request = require('request');
 const e = require("express");
 const User = db.users;
-const token = "xoxp-1258859871714-1271485003553-1289089112960-3e87c8934509d184503c27913cd69a84";
+const token = "xoxp-1258859871714-1271485003553-1289101843568-080a831499ada275914ee28b8feb46c0";
 
 exports.challange = (async function(req,res){
 
+  console.log("api call");
 	res.send(req.body);
   const userid = req.body.event.user;
   const event = req.body.event;
