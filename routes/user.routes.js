@@ -3,7 +3,7 @@ module.exports = app => {
 
   var router = require("express").Router();
 
-  router.post("/challange/", user.challange);
+  router.post("/challange", user.challange);
   router.post("/xembangxephang", user.xemXepHang);
   router.post("/danhgia", user.danhgia);
 
