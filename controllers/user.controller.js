@@ -2,7 +2,7 @@ const db = require("../models");
 const request = require('request');
 const e = require("express");
 const User = db.users;
-const token = "xoxp-1258859871714-1271485003553-1265427500259-dc986a82940fa53113f49633e98b97c4"
+const token = "xoxp-1258859871714-1271485003553-1265427500259-dc986a82940fa53113f49633e98b97c4";
 
 exports.challange = (async function(req,res){
 
@@ -24,6 +24,7 @@ exports.challange = (async function(req,res){
       }
     }
   }else{
+    console.log("user đã chưa tồn tại");
     // User chưa tồn tại add mới user;
     await addUser(userid);
     var result =await User.find({});
