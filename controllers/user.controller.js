@@ -2,7 +2,7 @@ const db = require("../models");
 const request = require('request');
 const e = require("express");
 const User = db.users;
-const token = "xoxp-1258859871714-1271485003553-1265427500259-dc986a82940fa53113f49633e98b97c4";
+const token = "xoxp-1258859871714-1271485003553-1289089112960-3e87c8934509d184503c27913cd69a84";
 
 exports.challange = (async function(req,res){
 
