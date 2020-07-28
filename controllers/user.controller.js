@@ -2,7 +2,6 @@ const db = require("../models");
 const request = require('request');
 const e = require("express");
 const User = db.users;
-const token = "xoxp-1258859871714-1271485003553-1265308049346-c8e0a4030c77fc3210ea00c55c0f5070";
 
 exports.challange = (async function(req,res){
 
@@ -44,7 +43,7 @@ async function updatePointUser(id){
    return result;
 };
 async function addUser(id){
-  request("https://slack.com/api/users.info?token="+token+"&&user="+id+"&pretty=1", function (error, response, body){
+  request("https://slack.com/api/users.info?token=xoxb-1258859871714-1263800561717-1YDOZYkQPF3Tog6nygaSvyr4&&user="+id+"&pretty=1", function (error, response, body){
     var name = JSON.parse(body).user.name;
     const user = new User({
       userid: id,
